@@ -7,17 +7,19 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const errorHandler = require("./Middlewares/ErrorHandler");
-
-dotenv.config();
-
-const app = express();
-
+ 
+dotenv.config();   
+   
+const app = express();  
+  
 app.use(morgan("dev"));
-app.use(cors({
+app.use(cors({ 
   origin: [
-    'https://admin-amber-three.vercel.app/',
+    
+    'https://admin-amber-three.vercel.app',
+    "https://admin-mq6bpukla-dhakk78-gmailcoms-projects.vercel.app",
     "http://localhost:3001",
-    "http://localhost:3002",
+    "http://localhost:3002", 
     "http://localhost:3003",
   ], 
   credentials: true,
